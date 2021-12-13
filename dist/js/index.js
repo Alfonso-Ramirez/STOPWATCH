@@ -50,3 +50,9 @@ window.onload = function() {
         }
     }
 }
+
+const checkbox = document.getElementById("checkbox");
+checkbox.addEventListener('change', () => {
+    // cambia el tema de la pagina
+    document.body.classList.toggle("dark");   
+})
