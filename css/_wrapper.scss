@@ -1,9 +1,14 @@
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
 .container {
+    @include flexCenter(column);
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     padding: 1.5rem;
     color: $white;
@@ -11,6 +16,7 @@
     .wrapper {
 
         h1, h2, p {
+            color: $black;
             font-size: 2rem;
             padding: 1rem;
             text-transform: uppercase;
@@ -30,7 +36,7 @@
             width:180px;
             outline: none;
             text-decoration-color: none;
-            background: $orange;
+            background: $gray;
             color: $white;
 
             &:hover {
